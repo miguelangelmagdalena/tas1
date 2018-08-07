@@ -84,7 +84,7 @@ a#navbarDropdown {
     top: 50px !important;
 }
 
-
+/*PRUEBA QUITAR para arreglar responsive y colocar lg al boton*/
 @media (min-width: 576px) {
    .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox!important;
