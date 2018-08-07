@@ -117,7 +117,7 @@
         <!-- Page Content  -->
         <div id="content" >
 
-            <nav id="navbar-principal" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <nav id="navbar-principal" class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -125,34 +125,32 @@
                         <i class="fas fa-align-left"></i>
                         
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <button class="btn btn-light d-inline-block d-sm-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
-
+					
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" data-toggle="collapse" aria-expanded="false" href="#Submenu1">
-                                Page1
-                                </a>
-                                <ul class="collapse list-unstyled" id="Submenu1">
-                                    <li>
-                                    	<a href="#">Page 1</a>
-                        			</li>
-                    				<li>
-                        				<a href="#">Page 2</a>
-                    				</li>
-                				</ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#section2">Page2</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#section3">Page3</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#section4">Page4</a>
-                            </li>
+
+                            <li class="nav-item dropdown">
+				                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				                  Tasaciones <i class="fas fa-sort-down"></i>
+				                </a>
+				                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				                    <a class="dropdown-item" href="#">Listar</a>
+				                    <a class="dropdown-item" href="#">Crear nueva</a>
+				                </div>
+				            </li>
+                            <li class="nav-item dropdown">
+				                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				                  Nombre Apellido <i class="fas fa-sort-down"></i>
+				                </a>
+				                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				                    <a class="dropdown-item" href="#">Perfil</a>
+				                    <a class="dropdown-item" href="#">Salir</a>
+				                </div>
+				            </li>
                         </ul>
                     </div>
                 </div>
@@ -222,13 +220,13 @@
     <script type="text/javascript">
         $(document).ready(function () {
 			/*$('body').scrollspy({ target: '#sidebar' });*/
-            var offset = 55;
+            /*var offset = 55;
 
             $('.navbar li a').click(function(event) {
                 event.preventDefault();
                 $($(this).attr('href'))[0].scrollIntoView();
                 scrollBy(0, -offset);
-            });
+            });*/
 
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
