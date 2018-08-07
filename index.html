@@ -8,19 +8,17 @@
 
     <title>Collapsible sidebar using Bootstrap 4</title>
 
-    <!-- Bootstrap CSS CDN 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="css/bootstrap_v4.1.0.min.css">
-
+    
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Font Awesome JS 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>-->
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="css/fontawesome_v5.2.0.css">
+    <script defer src="js/fontawesome_all_v5.2.0.js"></script>
 
-    <script defer src="js/solid_v5.0.13.js"></script>
-    <script defer src="js/fontawesome_v5.0.13.js"></script>
+    
 
 </head>
 
@@ -37,65 +35,81 @@
             <ul class="list-unstyled components">
                 <li class="">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-home"></i>
-                        Planilla PD
+                        <i class="far fa-clipboard"></i>
+                        <span class="hidden_toggle">Planilla de Datos </span>
+                        <span>PD</span>
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">PD1 - Datos Documentales</a>
+                            <a href="#">
+                            	<span>PD1</span>
+                            	<span class="hidden_toggle"> - Datos Documentales</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">PD2 - Inspección</a>
+                            <a href="#">
+                            	<span>PD2</span>
+                            	<span class="hidden_toggle"> - Inspección</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">PD3 - Precios</a>
+                            <a href="#">
+                            	<span>PD3</span>
+                            	<span class="hidden_toggle2 hidden_on"> Precios</span>
+                            	<span class="hidden_toggle"> - Precios</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#section2">
-                        <i class="fas fa-briefcase"></i>
-                        About
-                    </a>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
-                        Pages
+                        <span class="hidden_toggle">Planilla de Análisis </span>
+                        <span>PA</span>
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
+                            <a href="#">
+                            	<span>PA1</span>
+                            	<span class="hidden_toggle2 hidden_on"> Factores Ajuste</span>
+                            	<span class="hidden_toggle"> - Factores Ajuste</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fas fa-image"></i>
-                        Portfolio
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-chart-bar"></i>
+                        <span class="hidden_toggle">Planilla de Informe </span>
+                        <span>PI</span>
                     </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="#">
+                            	<span>PI1</span>
+                            	<span class="hidden_toggle2 hidden_on"> Tasación</span>
+                            	<span class="hidden_toggle"> - Tasación</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            	<span>PI2</span>
+                            	<span class="hidden_toggle2 hidden_on"> Revisión</span>
+                            	<span class="hidden_toggle"> - Revisión</span>
+                            </a>
+                        </li>
+                    </ul>
+
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-question"></i>
-                        FAQ
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-paper-plane"></i>
-                        Contact
-                    </a>
-                </li>
+                
             </ul>
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="#" class="download">Download source</a>
+                    <a href="#" class="download">Visualizar Informe</a>
                 </li>
                 <li>
-                    <a href="#" class="article">Back to article</a>
+                    <a href="#" class="article">Limpiar - Nueva tasación</a>
                 </li>
             </ul>
         </nav>
@@ -107,8 +121,9 @@
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <span>Menu</span>
                         <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
@@ -117,10 +132,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" data-toggle="collapse" aria-expanded="false" href="#pageSubmenu2">
+                                <a class="nav-link dropdown-toggle" data-toggle="collapse" aria-expanded="false" href="#Submenu1">
                                 Page1
                                 </a>
-                                <ul class="collapse list-unstyled" id="pageSubmenu2">
+                                <ul class="collapse list-unstyled" id="Submenu1">
                                     <li>
                                     	<a href="#">Page 1</a>
                         			</li>
@@ -218,6 +233,8 @@
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
 				$('#content').toggleClass('sidebarActive');
+				$('.hidden_toggle').toggleClass('hidden_on');
+				$('.hidden_toggle2').toggleClass('hidden_on');
             });
         });
     </script>

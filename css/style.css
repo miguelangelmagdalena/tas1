@@ -197,6 +197,9 @@ a.article:hover {
     color: #fff !important;
 }
 
+.hidden_on{
+  display: none;
+}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
