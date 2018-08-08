@@ -324,9 +324,9 @@ a.article:hover {
     #sidebar {
         margin-left: 0;
     }
-    #sidebarCollapse span {
+    /*#sidebarCollapse span {
         display: none;
-    }
+    }*/
 	
 	
 	#content {
